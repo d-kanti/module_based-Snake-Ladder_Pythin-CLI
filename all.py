@@ -13,15 +13,17 @@ import src.extra_func as x
 
 
 
-class Player:
+class Player():
     def __init__(self, name, pos):
         self.name = name
         self.pos = pos
     
-name_temp = input("Enter the name of the Player 1 :  ")
-p1 = Player(name_temp, 0)
-name_temp = input("Enter the name of the Player 2 :  ")
-p2 = Player(name_temp, 0)
+    def congrat(self):
+         print(f"Congratulations {self.name}!! You win the game!")
+
+    
+p1 = Player(x.nam("Player 1"), 0)
+p2 = Player(x.nam("Player 2"), 0)
 
 mode = mode.mode_select()
 
@@ -37,20 +39,20 @@ while not p1_win and not p2_win:
     if status == 0:
         (p1,p2_win,p1_win,status) = pt.turn_p1(mode,snl,p1,p2_win,p1_win,status)
         if p1_win :
-            print("Congratulations {}!! You win the game!".format(p1.name))
+            p1.congrat()
             break
         elif p2_win :
-            print("Congratulations {}!! You win the game!".format(p2.name))
+            p2.congrat()
             break
         else:
             continue
     elif status == 1:
         (p2,p1_win,p2_win,status) = pt.turn_p2(mode,snl,p2,p1_win,p2_win,status)
         if p1_win :
-            print("Congratulations {}!! You win the game!".format(p1.name))
+            p1.congrat()
             break
         elif p2_win :
-            print("Congratulations {}!! You win the game!".format(p2.name))
+            p2.congrat()
             break
         else:
             continue
