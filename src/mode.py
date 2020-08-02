@@ -8,7 +8,7 @@ def mode_select():
     mode = ""
 
     while(not mode):
-        temp = input("Please enter the Mode of the Game: ").lower()
+        temp = input("Please enter the Mode of the Game (manual or auto): ").lower()
         if temp == 'auto' or temp == 'manual':
             mode = temp
         else:
