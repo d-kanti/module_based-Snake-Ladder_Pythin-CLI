@@ -26,7 +26,7 @@ def turn_p1(mode,snl,p1,p2_win,p1_win,status):
         else:
             print("Invalid input !!  Try again....")        
     elif mode == 'manual':
-        user_input = input("Player 1:")
+        user_input = input("Player 1 (1~20):")
         try:
             dice = int(user_input)
             if dice>0 and dice<21:
@@ -90,7 +90,7 @@ def turn_p2(mode, snl,p2,p1_win,p2_win,status):
         else:
             print("Invalid input !!  Try again....")        
     elif mode == 'manual':
-        user_input = input("Player 2:")
+        user_input = input("Player 2 (1~20):")
         try:
             dice = int(user_input)
             if dice>0 and dice<21:
