@@ -2,6 +2,7 @@
 import src.board_info as snl
 import src.mode as mode
 import src.player_turn as pt
+import src.extra_func as x
 
 
 
