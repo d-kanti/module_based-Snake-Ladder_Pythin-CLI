@@ -11,4 +11,4 @@ snakes = {
     98:79
     }
 
-score = 100
+final_score = 100
