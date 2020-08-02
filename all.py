@@ -1,6 +1,6 @@
 import random
 import src.board_info as snl
-
+import src.mode as mode
 
 ladders = snl.ladders
 snakes = snl.snakes
@@ -24,14 +24,8 @@ p1 = Player(name_temp, 0)
 name_temp = input("Enter the name of the Player 2 :  ")
 p2 = Player(name_temp, 0)
 
-mode = ""
-while(not mode):
-    temp = input("Please enter the Mode of the Game: ")
-    if temp == 'auto' or temp == 'manual':
-        mode = temp
-    else:
-        print("Invalid Input !!")
-        continue
+mode = mode.mode_select()
+
 
 def turn_p2(mode, ladders, snakes,final_score):
     global p2
