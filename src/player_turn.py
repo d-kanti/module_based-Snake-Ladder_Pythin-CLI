@@ -35,7 +35,7 @@ def turn_p1(mode,snl,p1,p2_win,p1_win,status):
                     print("input not allowed")
                 else:
                     p1.pos += dice
-
+ 
                 if p1.pos in snl.ladders:
                     print(" Climbed a ladder  |+|+|+|+|+|+|")
                     p1.pos = snl.ladders[p1.pos]
